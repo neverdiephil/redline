@@ -1,4 +1,4 @@
-name: Deploy Combat Race Preview
+name: Publish Combat Race Preview
 
 on:
   push:
@@ -7,19 +7,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: combat-race-preview
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,24 +22,20 @@ jobs:
       - name: Download compiled preview artifact
         run: |
           curl --fail --location 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-1534-81f5-bbce-196246d47ac1/raw?se=2026-09-20T00%3A57%3A11Z&sp=r&sv=2026-02-06&sr=b&scid=13c4c66d-2dee-5315-a362-aed8407dd8d6&skoid=78501c7f-f65d-4e8d-9110-bed29e1beb41&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-19T13%3A15%3A39Z&ske=2026-09-20T13%3A15%3A39Z&sks=b&skv=2026-02-06&sig=jcl20GzUhsIH5EEgi223zPEc8tqXnBF7uLXCEfsji4U%3D' --output /tmp/redline-preview.zip
-          mkdir -p _site
-          unzip -q /tmp/redline-preview.zip -d _site
-          find _site -type f -name '*.map' -delete
-          touch _site/.nojekyll
-          test -f _site/index.html
+          rm -rf /tmp/redline-site
+          mkdir -p /tmp/redline-site
+          unzip -q /tmp/redline-preview.zip -d /tmp/redline-site
+          find /tmp/redline-site -type f -name '*.map' -delete
+          touch /tmp/redline-site/.nojekyll
+          test -f /tmp/redline-site/index.html
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-# Preview deployment trigger
+      - name: Publish build-only gh-pages branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan gh-pages
+          git rm -rf . || true
+          cp -a /tmp/redline-site/. .
+          git add -A
+          git commit -m "Publish combat-racing preview"
+          git push --force origin gh-pages
