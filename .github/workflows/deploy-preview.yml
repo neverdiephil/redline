@@ -21,7 +21,7 @@ jobs:
 
       - name: Download compiled preview artifact
         run: |
-          curl --fail --location 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-1534-81f5-bbce-196246d47ac1/raw?se=2026-09-20T00%3A57%3A11Z&sp=r&sv=2026-02-06&sr=b&scid=13c4c66d-2dee-5315-a362-aed8407dd8d6&skoid=78501c7f-f65d-4e8d-9110-bed29e1beb41&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-19T13%3A15%3A39Z&ske=2026-09-20T13%3A15%3A39Z&sks=b&skv=2026-02-06&sig=jcl20GzUhsIH5EEgi223zPEc8tqXnBF7uLXCEfsji4U%3D' --output /tmp/redline-preview.zip
+          curl --fail --location 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-e5ac-81f5-b9cd-3c23a584d8b8/raw?se=2026-09-21T05%3A52%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=4d1e7f38-c03f-5031-939e-069898ddb5a3&skoid=78501c7f-f65d-4e8d-9110-bed29e1beb41&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-20T17%3A20%3A09Z&ske=2026-09-21T17%3A20%3A09Z&sks=b&skv=2026-02-06&sig=svjlZ23VnfIQMFvFLu8qffSamkVZTR8bVy2uR1T4zik%3D' --output /tmp/redline-preview.zip
           rm -rf /tmp/redline-site
           mkdir -p /tmp/redline-site
           unzip -q /tmp/redline-preview.zip -d /tmp/redline-site
@@ -37,5 +37,5 @@ jobs:
           git rm -rf . || true
           cp -a /tmp/redline-site/. .
           git add -A
-          git commit -m "Publish combat-racing preview"
+          git commit -m "Publish integrated POC preview"
           git push --force origin gh-pages
