@@ -21,7 +21,7 @@ jobs:
 
       - name: Download compiled preview artifact
         run: |
-          curl --fail --location 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-e5ac-81f5-b9cd-3c23a584d8b8/raw?se=2026-09-21T05%3A52%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=4d1e7f38-c03f-5031-939e-069898ddb5a3&skoid=78501c7f-f65d-4e8d-9110-bed29e1beb41&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-20T17%3A20%3A09Z&ske=2026-09-21T17%3A20%3A09Z&sks=b&skv=2026-02-06&sig=svjlZ23VnfIQMFvFLu8qffSamkVZTR8bVy2uR1T4zik%3D' --output /tmp/redline-preview.zip
+          curl --fail --location 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-784c-81f5-8ed0-656b64cb65b2/raw?se=2026-09-21T06%3A43%3A12Z&sp=r&sv=2026-02-06&sr=b&scid=0e8a098e-7294-52a2-b709-8e4218a62363&skoid=78501c7f-f65d-4e8d-9110-bed29e1beb41&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-20T14%3A32%3A19Z&ske=2026-09-21T14%3A32%3A19Z&sks=b&skv=2026-02-06&sig=qni9q15d95fReT5OIYHP9ssEK2%2Bd6SU2/e/ZlrSvWDs%3D' --output /tmp/redline-preview.zip
           rm -rf /tmp/redline-site
           mkdir -p /tmp/redline-site
           unzip -q /tmp/redline-preview.zip -d /tmp/redline-site
@@ -32,10 +32,10 @@ jobs:
       - name: Publish build-only gh-pages branch
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "418982749+github-actions[bot]@users.noreply.github.com"
           git switch --orphan gh-pages
           git rm -rf . || true
           cp -a /tmp/redline-site/. .
           git add -A
-          git commit -m "Publish integrated POC preview"
+          git commit -m "Publish measured POC-02 car fit"
           git push --force origin gh-pages
