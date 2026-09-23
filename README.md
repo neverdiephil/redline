@@ -1,3 +1,17 @@
+# Redline public preview
+
+Play: https://neverdiephil.github.io/redline/
+
+The current game is built and tested in the private `neverdiephil/redline-project` repository, on `main`. This repository serves verified compiled releases from `gh-pages`; source maps are excluded. The upstream source history below is retained for attribution, not used as the current release source.
+
+To release, run `npm run release:publish -- <successful-main-run-id>` from the private source checkout with GitHub CLI authenticated for both repositories. The publisher downloads the tested GitHub Actions artifact, verifies its source SHA and checksums, and updates `gh-pages` without force. Pages deploys that branch. There are no expiring download links or separate public rebuilds.
+
+The deployed source version is recorded at https://neverdiephil.github.io/redline/release-manifest.json after the first validated release. See `docs/RELEASING.md` in the private source repository for validation, prerequisites, and rollback instructions.
+
+---
+
+## Upstream project history
+
 <div align="center">
 
 # REDLINE
