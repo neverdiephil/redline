@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceSha": "229e87221f864b5f4c23fd8f4d6114663c4cedbc",
+  "sourceSha": "5a5b36f3314b56402c62b1fa39e57b4af4b55794",
   "base": "/redline/",
   "files": {
     ".htaccess": "c7ce844024b590a8879e080a263c9ba3309d7a3c64640098b9e349ed79adce38",
@@ -8,8 +8,8 @@
     "assets/boyHiBody-DHJ5Gzs3.png": "c497c9c0bdc8084fd288f86a162d23850afc81bec126a83579b3b39d59990ba2",
     "assets/boyShrugging-B0epdl_S.png": "3d32c086561679ee2fc8d5d4a5413808b74cb55d35956d395941ab6a8113a717",
     "assets/boyYay-DyYK-NEy.png": "bb110da992c0e1a8c152f9d81868e6ee42326828eb4b8ecf84dc0ec9a822f736",
-    "assets/index-D3zeAzkx.js": "94cb2fc30b5c91bf8a0fcfb6bd3145fa7e5e682634b266b77fdd62bff3656bb4",
-    "assets/index-jC_KgA6x.css": "cdd9e7f037ae860749a8bc9c6a5179ca785276aea309aa353fce499ba7051882",
+    "assets/index-CE4TsuZ2.css": "1c342296a37ddb192be06c3e16db3abcd4755729fe36afdbc4acfa2effc11b68",
+    "assets/index-ClevA2sy.js": "d4a99ea06838fd53473f9279f2b7d422018ea5b272fb40d0228fb79c455b459d",
     "draco/draco_decoder.js": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04",
     "draco/draco_decoder.wasm": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2",
     "draco/draco_encoder.js": "d5c653caf242556ddff9370e86979b8b5c6131bc196be388698a85dc2e1bb59b",
@@ -29,7 +29,7 @@
     "favicon/mstile-150x150.png": "b4c73a11f65b25bdad7d5aaff975c869d2876ce4d7062bfee24d61e662366f72",
     "favicon/safari-pinned-tab.svg": "25fd7a96ba3cc6c1aefae8fc6af0ff0afa735e5568d9166dcf5c2354595cdd49",
     "favicon/site.webmanifest": "3ad16f62565096804cfeb2bf7989d21855b7e58430910e0d659ee77bdf032eca",
-    "index.html": "a855b6d0fe6748f5ff6c4a5cda97e4bd75996706a92bd0277ca11e781790083b",
+    "index.html": "d1c18e6f29d7640e2fcced6c3e3560c59b83cf9ef921a811fe28bcbdd0990298",
     "models/brick/base.glb": "76dc992c75b511281d32f7426252cd93c05586c1a41dcbfe22d42ae2a760db8c",
     "models/brick/collision.glb": "d6770d90515659f45aab2167fe1d82aaa8c5fa6315fc7b0ed0f76fef01b35a40",
     "models/car/cyberTruck/antena.glb": "c59c22cca30ab5e8d4f83f2f748fe9ba90643703a47da3036a8300655aeab610",
@@ -160,6 +160,10 @@
     "sounds/wood-hits/wood-hit-1.wav": "c3b7195ee9b8c83fc2d281afb3a9553b3dc088629debed7b9855d82944e35abe",
     "sprites/cars/poc/car_default.png": "e399b8155b2b30d38c6125b192294bf523f6a90d4117ddb365c219c7944b9644",
     "sprites/cars/poc/SOURCE.md": "ddf817787d4f18a01aae8c97f3dfccb5706cb99a7608d8b985109104c63b9519",
+    "sprites/illustrated/boss_mustang_sprite_reference.png": "779606a2c1af5f6da0307b3fbb9cd9f6712a7bc94f553cca1cfb09a2eae172a6",
+    "sprites/illustrated/passenger-poc-black-hoodie-3view.png": "f8009f1033051536a251241d8bbe81485441cb072ff1b360629e14df36c6e558",
+    "sprites/illustrated/redline_painted_streetscape_poc.png": "9c64bce9b8a2414db5c7928301293083564d3eb2dba6868699f705b5cd00208e",
+    "sprites/illustrated/SOURCE.md": "5c18e97e8d7a9875e8e03452de927d46b276ae32e78324617cbe2b912de958a1",
     "textures/poc/car/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "textures/poc/LICENSES.md": "f11d306d6bd2b80129c8b6e122aa0d9dea8bcd3593b913ca7d5edfffed021690"
   }
